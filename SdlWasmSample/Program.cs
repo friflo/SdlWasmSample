@@ -1,6 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices.JavaScript;
+using MonoGame;
 using SdlWasmSample;
 
 public static partial class Program
@@ -28,7 +29,7 @@ public static partial class Program
     private static bool _firstRun = true;
     private static DateTime _lastLog = DateTime.UnixEpoch;
     // private static SampleSdl? _sample = null;
-    private static SampleGame? _sample = null;
+    private static Game1? _sample = null;
     
     [JSExport]
     private static void MainLoop()
@@ -41,7 +42,7 @@ public static partial class Program
                 _firstRun = false;
 
                 //_sample = new SampleSdl($"Test Window {DateTime.UtcNow:s}", 600, 400);
-                _sample = new SampleGame();
+                _sample = new Game1();
             }
 
             var now = DateTime.UtcNow;

@@ -32,4 +32,7 @@
             <Visible>false</Visible>
         </EmccExportedRuntimeMethod>
     </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="Friflo.Engine.ECS" Version="1.23.0" />
+    </ItemGroup>
 </Project>
