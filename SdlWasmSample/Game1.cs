@@ -50,7 +50,8 @@ public class Game1 : Game
     
     protected override void LoadContent()
     {
-	    // cube = Content.Load<Model>("Cube");
+	    Content.ResourceAssembly = typeof(Game1).Assembly;
+	    cube = Content.Load<Model>("Cube");
 	    // use this.Content to load your game content here
     }
     
@@ -72,11 +73,11 @@ public class Game1 : Game
 	    // Add your drawing code here
 	    triangle.Draw(this, camera);
 
-	    // DrawModel(cube, worldMatrix, camera);
+	    DrawModel(cube, worldMatrix, camera);
 			
 	    var world = worldMatrix + Matrix.CreateTranslation(new Vector3(5,0,0));
-	    // DrawModel(cube, world, camera);
-	    // drones.Draw(cube, camera);
+	    DrawModel(cube, world, camera);
+	    drones.Draw(cube, camera);
 			
 	    base.Draw(gameTime);
     }

@@ -38,4 +38,11 @@
     <ItemGroup>
       <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.DesktopGL.csproj" />
     </ItemGroup>
+
+    <!-- add all files in the specified folder as embedded resources -->
+    <Target Name="MyCustomStep" BeforeTargets="BeforeBuild">
+        <CreateItem Include="Content\bin\DesktopGL\*.xnb">
+            <Output ItemName="EmbeddedResource" TaskParameter="Include" />
+        </CreateItem>
+    </Target>
 </Project>

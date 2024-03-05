@@ -9,7 +9,7 @@ namespace MonoGame;
 public class Drones
 {
     private readonly    EntityStore                         store;
-    private readonly    int                                 droneCount = 10_000;
+    private readonly    int                                 droneCount = 1_000;
     
     private readonly    ArchetypeQuery<Transform>           transQuery;
     private readonly    ArchetypeQuery<Transform, Position> transPosQuery;
