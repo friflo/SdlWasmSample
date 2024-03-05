@@ -5,9 +5,9 @@
         <Nullable>disable</Nullable>
     </PropertyGroup>
     <ItemGroup>
-      <Reference Include="MonoGame.Framework">
+      <!-- <Reference Include="MonoGame.Framework">
         <HintPath>..\lib\MonoGame\MonoGame.Framework.dll</HintPath>
-      </Reference>
+      </Reference> -->
       <Reference Include="SDL2-CS">
         <HintPath>..\lib\SDL2-CS.dll</HintPath>
       </Reference>
@@ -34,5 +34,8 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="Friflo.Engine.ECS" Version="1.23.0" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\MonoGame\MonoGame.Framework\MonoGame.Framework.DesktopGL.csproj" />
     </ItemGroup>
 </Project>
